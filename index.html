@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <title>EBook Luv</title>
+</head>
+<body>
+  <!-- mobile first 
+  
+  -->
+  <div id="eBookLuvContainer">
+    <div class="nav-container">
+      <!-- bootstrap don't have <header> -->
+      <div class="navbar-menu-mobile">
+        <nav class="navbar navbar-expand-lg bottom-shadow navbar-padding">
+      
+          <div class="left-navbar">
+            <div class="logo-container">
+              <a href="/" class="nav-logo">
+                <img src="images/logo.svg" class="logo" 
+                    width="100" height="24" alt="logo">
+              </a>
+            </div>
+          </div>
+          
+          <div class="right-navbar">
+            <ul class="list-right-navbar">
+              <li class="right-nav-item">
+                <div class="search-wrapper" aria-label="search-form-container">
+                  <div class="svg-btn-wrapper">
+                    <!-- toggle search field -->
+                    <span class="toggle-search svg-btn"
+                        data-target="#searchFormMobile" aria-expanded="false">
+                      <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.941 12.0762C14.0232 10.7977 14.6757 9.14401 14.6757 7.33785C14.6757 3.28527 11.3904 0 7.33785 0C3.28527 0 0 3.28527 0 7.33785C0 11.3904 3.28527 14.6757 7.33785 14.6757C9.14401 14.6757 10.7977 14.0232 12.0762 12.941L19.1352 20L20 19.1352L12.941 12.0762ZM7.33785 13.3481C4.01847 13.3481 1.32758 10.6572 1.32758 7.33785C1.32758 4.01847 4.01847 1.32758 7.33785 1.32758C10.6572 1.32758 13.3481 4.01847 13.3481 7.33785C13.3481 10.6572 10.6572 13.3481 7.33785 13.3481Z" fill="black"/>
+                      </svg>                                    
+                    </span>
+                  </div>
+                  
+                  <form id="searchFormMobile" class="e-collapse search-form"> 
+                    <button type="button" class="svg-btn back-btn hide-tablet"
+                        data-target="#searchFormMobile" aria-expanded="false" >
+                      <span class="svg-wrapper">
+                        <svg class="svg-icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9453 0.167969L13.0547 1.83207L3.80282 8.00002L13.0547 14.168L11.9453 15.8321L0.197266 8.00002L11.9453 0.167969Z" fill="black"/>
+                        </svg>
+                      </span>
+                    </button>
+    
+                    <input type="search" name="s" placeholder="Search eBookLuv"
+                        autocomplete="off"  id="searchField" class="text-input search-field">
+                
+                    <button type="submit" class="svg-btn hide-tablet">
+                      <span class="svg-wrapper">
+                        <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.941 12.0762C14.0232 10.7977 14.6757 9.14401 14.6757 7.33785C14.6757 3.28527 11.3904 0 7.33785 0C3.28527 0 0 3.28527 0 7.33785C0 11.3904 3.28527 14.6757 7.33785 14.6757C9.14401 14.6757 10.7977 14.0232 12.0762 12.941L19.1352 20L20 19.1352L12.941 12.0762ZM7.33785 13.3481C4.01847 13.3481 1.32758 10.6572 1.32758 7.33785C1.32758 4.01847 4.01847 1.32758 7.33785 1.32758C10.6572 1.32758 13.3481 4.01847 13.3481 7.33785C13.3481 10.6572 10.6572 13.3481 7.33785 13.3481Z" fill="black"/>
+                        </svg>                   
+                      </span>
+                      </button>
+                  </form>
+                </div>
+              </li>
+    
+              <li class="right-nav-item hide-phone">
+                <a href="#" class="signIn-btn signIn-text">
+                  Sign in
+                </a> 
+              </li>
+    
+              <li class="right-nav-item hide-desktop">
+                <button class="toggle-menu svg-btn"
+                  data-toggle="e-collapse" data-target="#navbarListMobile"
+                  aria-controls="navbarNav" aria-expanded="false" 
+                  aria-label="Toggle navigation" data-transition="navbar-container-transition">
+                  <span class="menu-icon svg-wrapper">
+                    <svg class="svg-icon" width="24" height="20" viewBox="0 0 24 20" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M24 3.5H0V0.5H24V3.5Z" fill="black"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M24 11.5H0V8.5H24V11.5Z" fill="black"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M24 19.5H0V16.5H24V19.5Z" fill="black"/>
+                    </svg>
+                  </span>
+                </button>
+
+                <div class="e-collapse navbar-collapse navbar-container nav-font" id="navbarListMobile" aria-expanded="false">
+                  <div class="nav-btn-wrapper hide-desktop"> 
+                    <!--  reuse menu btn -->
+                    <button class="toggle-menu svg-btn"
+                        data-toggle="e-collapse" data-target="#navbarListMobile"
+                        aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation" data-transition="navbar-container-transition">
+                        <span class="svg-wrapper">
+                          <svg class="svg-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 5.15781L12.1578 0L14 1.84219L8.84219 7L14 12.1578L12.1578 14L7 8.84219L1.84219 14L0 12.1578L5.15781 7L0 1.84219L1.84219 0L7 5.15781Z" fill="black"/>
+                          </svg>
+                        </span>
+                    </button>
+                  </div>
+          
+                  <ul class="navbar-nav navbar-wrapper">    
+                    <li class="nav-item active">
+                      <a href="https://api.jquery.com/one/#one-events-data-handler" class="nav-link nav-item-wrapper">
+                        Home
+                      </a>
+                    </li>
+          
+                    <li class="nav-item">
+                      <div class="dropdown-menu-container">
+                        <button class="toggle-dropdown nav-item-wrapper category-item"
+                          type="button" data-target="#dropdownCategoryMobile" 
+                          data-toggle="dropdown-collapse" aria-hasgroup="true" 
+                          aria-expanded="false" data-transition="dropdown-container-transition">
+                          <div>
+                            <span>Categories</span>
+                          </div>
+                          
+                          <div class="icon-arrow">
+                            <span class="svg-btn hide-desktop">
+                              <svg class="svg-icon" width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.03541 0L-5.8918e-08 1.48731L8.63491 7L-5.8918e-08 12.5127L1.03541 14L12 7L1.03541 0Z" fill="black"/>
+                              </svg>  
+                            </span>
+                          </div>
+                        </button>
+                        
+                        <div class="dropdown-collapse dropdown-container" id="dropdownCategoryMobile" 
+                            aria-expanded="false"  >
+                          <ul class="dropdown-list">
+                            <div class="nav-btn-wrapper hide-desktop">
+                              <button class="toggle-dropdown svg-btn" type="button" data-target="#dropdownCategoryMobile"
+                                data-toggle="dropdown-collapse" aria-expanded="false" aria-controls="#listCategories"
+                                data-transition="dropdown-container-transition">
+                                <span class="svg-wrapper">
+                                  <svg class="svg-icon" width="13" height="16" viewBox="0 0 13 16">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1619 0.167969L12.1973 1.76152L3.56236 7.66797L12.1973 13.5744L11.1619 15.168L0.197266 7.66797L11.1619 0.167969Z" fill="black"/>
+                                  </svg>                          
+                                </span>
+                              </button>
+                            </div>
+        
+                            <li class="dropdown-item">
+                              <div class="dropdown-item-wrapper">
+                                <a href="#">
+                                  Kids
+                                </a>
+                              </div>
+                            </li>
+        
+                            <li class="dropdown-item">
+                              <div class="dropdown-item-wrapper">
+                                <a href="#">
+                                  Young Adult
+                                </a>
+                              </div>
+                            </li>
+        
+                            <li class="dropdown-item">
+                              <div class="dropdown-item-wrapper">
+                                <a href="#">
+                                  Romance
+                                </a>
+                              </div>
+                            </li>
+        
+                            <li class="dropdown-item">
+                              <div class="dropdown-item-wrapper">
+                                <a href="#">
+                                  Travel & Adventure
+                                </a>
+                              </div>
+                            </li>
+        
+                            <li class="dropdown-item">
+                              <div class="dropdown-item-wrapper">
+                                <a href="#">
+                                  History
+                                </a>
+                              </div>
+                            </li>
+        
+                            <li class="dropdown-item">
+                              <div class="dropdown-item-wrapper">
+                                <a href="#">
+                                  Science
+                                </a>
+                              </div>
+                            </li>
+        
+                            <li class="dropdown-item">
+                              <div class="dropdown-item-wrapper">
+                                <a href="#">
+                                  Cooking
+                                </a>
+                              </div>
+                            </li>
+                        
+                            <li class="dropdown-item">
+                              <div class="dropdown-item-wrapper">
+                                <a href="#">
+                                  Business
+                                </a>
+                              </div>
+                            </li>
+        
+                            <li class="dropdown-item">
+                              <div class="dropdown-item-wrapper">
+                                <a href="#">
+                                  Health & Wellness
+                                </a>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+        
+                      </div>
+                    </li>
+                  
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-item-wrapper">
+                        Bestseller
+                      </a>
+                    </li>
+          
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-item-wrapper">
+                        Community
+                      </a>
+                    </li>
+                    
+                    <li class="nav-item hide-desktop">
+                      <a href="#" class="nav-link nav-item-wrapper signIn-btn">
+                        Sign in
+                      </a> 
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="navbar-menu-tablet">
+        <nav class="navbar navbar-expand-lg bottom-shadow navbar-padding">   
+        <div class="left-navbar">
+          <div class="logo-container">
+            <a href="/" class="nav-logo">
+              <img src="images/logo.svg" class="logo" 
+                  width="100" height="24" alt="logo">
+            </a>
+          </div>
+          
+          <div class="navbar-collapse nav-font" id="navbarListDesktop" aria-expanded="false">    
+            <ul class="navbar-nav navbar-wrapper">    
+              <li class="nav-item active">
+                <a href="#" class="nav-link nav-item-wrapper">
+                  Home
+                </a>
+              </li>
+
+              <li class="nav-item dropdown" aria-controls="dropdown-menu">
+                <div class="dropdown-menu-container">
+                  <button class="nav-item-wrapper category-item" data-toggle="dropdown"
+                    type="button" id="categories" aria-haspopup ="true" 
+                    aria-expanded="false" >
+                    <div>
+                      <span>Categories</span>
+                    </div>
+                    
+                    <div class="icon-arrow">
+                      <span class="svg-btn icon-open-dropdown">
+                        <svg class="svg-icon" width="12" height="7" viewBox="0 0 12 7" >
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.651807L6 7L-3.72806e-07 0.651807L1.25726 0L6 5.01797L10.7427 0L12 0.651807Z" fill="black"/>
+                        </svg>  
+                      </span>
+                    </div>
+                  </button>
+                  
+                  <div class="dropdown-menu dropdown-container" aria-labelledby="categories">
+                    <ul class="dropdown-list">
+                      <li class="dropdown-item">
+                        <div class="dropdown-item-wrapper">
+                          <a href="#">
+                            Kids
+                          </a>
+                        </div>
+                      </li>
+  
+                      <li class="dropdown-item">
+                        <div class="dropdown-item-wrapper">
+                          <a href="#">
+                            Young Adult
+                          </a>
+                        </div>
+                      </li>
+  
+                      <li class="dropdown-item">
+                        <div class="dropdown-item-wrapper">
+                          <a href="#">
+                            Romance
+                          </a>
+                        </div>
+                      </li>
+  
+                      <li class="dropdown-item">
+                        <div class="dropdown-item-wrapper">
+                          <a href="#">
+                            Travel & Adventure
+                          </a>
+                        </div>
+                      </li>
+  
+                      <li class="dropdown-item">
+                        <div class="dropdown-item-wrapper">
+                          <a href="#">
+                            History
+                          </a>
+                        </div>
+                      </li>
+  
+                      <li class="dropdown-item">
+                        <div class="dropdown-item-wrapper">
+                          <a href="#">
+                            Science
+                          </a>
+                        </div>
+                      </li>
+  
+                      <li class="dropdown-item">
+                        <div class="dropdown-item-wrapper">
+                          <a href="#">
+                            Cooking
+                          </a>
+                        </div>
+                      </li>
+                  
+                      <li class="dropdown-item">
+                        <div class="dropdown-item-wrapper">
+                          <a href="#">
+                            Business
+                          </a>
+                        </div>
+                      </li>
+  
+                      <li class="dropdown-item">
+                        <div class="dropdown-item-wrapper">
+                          <a href="#">
+                            Health & Wellness
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+  
+                </div>
+              </li>
+            
+              <li class="nav-item">
+                <a href="#" class="nav-link nav-item-wrapper">
+                  Bestseller
+                </a>
+              </li>
+    
+              <li class="nav-item">
+                <a href="#" class="nav-link nav-item-wrapper">
+                  Community
+                </a>
+              </li>
+              
+              <li class="nav-item hide-desktop">
+                <a href="#" class="nav-link nav-item-wrapper signIn-btn">
+                  Sign in
+                </a> 
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="right-navbar">
+          <ul class="list-right-navbar">
+            <li class="right-nav-item">
+              <div class="search-wrapper" aria-label="search-form-container">
+                <div class="svg-btn-wrapper">
+                  <!-- toggle search field -->
+                  <span class="toggle-search svg-btn" data-target="#searchFormTablet">
+                    <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.941 12.0762C14.0232 10.7977 14.6757 9.14401 14.6757 7.33785C14.6757 3.28527 11.3904 0 7.33785 0C3.28527 0 0 3.28527 0 7.33785C0 11.3904 3.28527 14.6757 7.33785 14.6757C9.14401 14.6757 10.7977 14.0232 12.0762 12.941L19.1352 20L20 19.1352L12.941 12.0762ZM7.33785 13.3481C4.01847 13.3481 1.32758 10.6572 1.32758 7.33785C1.32758 4.01847 4.01847 1.32758 7.33785 1.32758C10.6572 1.32758 13.3481 4.01847 13.3481 7.33785C13.3481 10.6572 10.6572 13.3481 7.33785 13.3481Z" fill="black"/>
+                    </svg>                                    
+                  </span>
+                </div>
+                
+                <form id="searchFormTablet" class="e-collapse search-form" aria-expanded="false"> 
+                  <button type="button" class="svg-btn back-btn hide-tablet"
+                      data-target="#searchFormTablet">
+                    <span class>
+                      <svg class="svg-icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9453 0.167969L13.0547 1.83207L3.80282 8.00002L13.0547 14.168L11.9453 15.8321L0.197266 8.00002L11.9453 0.167969Z" fill="black"/>
+                      </svg>
+                    </span>
+                  </button>
+  
+                  <input type="search" name="s" placeholder="Search eBookLuv"
+                      autocomplete="off"  id="searchField" class="text-input search-field">
+              
+                  <button type="submit" class="svg-btn hide-tablet">
+                    <span>
+                      <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.941 12.0762C14.0232 10.7977 14.6757 9.14401 14.6757 7.33785C14.6757 3.28527 11.3904 0 7.33785 0C3.28527 0 0 3.28527 0 7.33785C0 11.3904 3.28527 14.6757 7.33785 14.6757C9.14401 14.6757 10.7977 14.0232 12.0762 12.941L19.1352 20L20 19.1352L12.941 12.0762ZM7.33785 13.3481C4.01847 13.3481 1.32758 10.6572 1.32758 7.33785C1.32758 4.01847 4.01847 1.32758 7.33785 1.32758C10.6572 1.32758 13.3481 4.01847 13.3481 7.33785C13.3481 10.6572 10.6572 13.3481 7.33785 13.3481Z" fill="black"/>
+                      </svg>                   
+                    </span>
+                    </button>
+                </form>
+              </div>
+            </li>
+  
+            <li class="right-nav-item hide-phone">
+              <a href="#" class="signIn-btn signIn-text">
+                Sign in
+              </a> 
+            </li>
+          </ul>
+        </div>
+        </nav>
+      </div>
+      
+    </div>
+
+    <div>
+      <img class="img-background" src="https://images.wallpaperscraft.com/image/laptop_room_on_the_desk_keyboard_mouse_apple_window_interior_73963_1920x1080.jpg" alt="background">
+    </div>
+  </div>
+  
+  
+  
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script defer src="./scripts/main.js"></script>
+
+</body>
+</html>
