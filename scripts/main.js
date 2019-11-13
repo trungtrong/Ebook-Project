@@ -30,7 +30,10 @@ https://gomakethings.com/climbing-up-and-down-the-dom-tree-with-vanilla-javascri
 
   const $searchBtn = $('.toggle-search');
   const $menuBtn = $('.toggle-menu');
+  
   const $dropdownMobile = $('.toggle-dropdown');
+  // const $closeDropdownM = $('.close-dropdown');
+
   const $dropdownDesktop = $('.dropdown');
 
   // $(document).on('click', toggleCollapser);
@@ -84,21 +87,24 @@ https://gomakethings.com/climbing-up-and-down-the-dom-tree-with-vanilla-javascri
     const targetId = $(this).attr('data-target');
 
     const $dropdownList = $(targetId);
-    dropdown.$dropdownList = $dropdownList;
-
+    
     const dataTransition = 'dropdown-container-transition';
-
     $dropdownList.toggleClass(dataTransition);
 
-    dropdown.dataTransition = dataTransition;
-
-    dropdown.$container = $dropdownList.closest('[aria-label="dropdown-container"]');
-
-    const ariaExpanded = $(this).attr('aria-expanded');
-    ariaExpanded === 'false' ? $(this).attr('aria-expanded', 'true')
-          : $(this).attr('aria-expanded', 'false');
-
+    if (!$dropdownList.hasClass(dataTransition)) {
+      /* 
+        - dropdown is close
+      */
+      dropdown = {};
+      console.log('close');
+    } else {
+      console.log('open');
+      dropdown.$dropdownList = $dropdownList;
+      dropdown.dataTransition = dataTransition;
+      dropdown.$container = $dropdownList.closest('[aria-controls="dropdown-container"]');
+    }
   }
+
 
   function toggleCollapser(event) {
     const dataToggle = event.data["data-toggle"];
@@ -149,7 +155,10 @@ https://gomakethings.com/climbing-up-and-down-the-dom-tree-with-vanilla-javascri
       =>  dropdown is over the nav
       =>  we make dropdown in the order of priority 
     */
+    console.log('dropdown', dropdown);
     if (dropdown.$dropdownList) {
+      console.log('11', $target.closest(dropdown.$container).length);
+      console.log('22', $target.is(dropdown.$container));
       if (!$target.closest(dropdown.$container).length && !$target.is(dropdown.$container)) {
         dropdown.$dropdownList.removeClass(dropdown.dataTransition);
         dropdown = {};

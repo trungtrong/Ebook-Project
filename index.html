@@ -109,12 +109,11 @@
                       </a>
                     </li>
           
-                    <li class="nav-item">
+                    <li class="nav-item" aria-controls="dropdown-container">
                       <div class="dropdown-menu-container">
                         <button class="toggle-dropdown nav-item-wrapper category-item"
                           type="button" data-target="#dropdownCategoryMobile" 
-                          data-toggle="dropdown-collapse" aria-hasgroup="true" 
-                          aria-expanded="false" data-transition="dropdown-container-transition">
+                          aria-haspopup="true" aria-expanded="false">
                           <div>
                             <span>Categories</span>
                           </div>
@@ -132,9 +131,8 @@
                             aria-expanded="false"  >
                           <ul class="dropdown-list">
                             <div class="nav-btn-wrapper hide-desktop">
-                              <button class="toggle-dropdown svg-btn" type="button" data-target="#dropdownCategoryMobile"
-                                data-toggle="dropdown-collapse" aria-expanded="false" aria-controls="#listCategories"
-                                data-transition="dropdown-container-transition">
+                              <button class="toggle-dropdown svg-btn" type="button" 
+                                data-target="#dropdownCategoryMobile" aria-expanded="false">
                                 <span class="svg-wrapper">
                                   <svg class="svg-icon" width="13" height="16" viewBox="0 0 13 16">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1619 0.167969L12.1973 1.76152L3.56236 7.66797L12.1973 13.5744L11.1619 15.168L0.197266 7.66797L11.1619 0.167969Z" fill="black"/>
