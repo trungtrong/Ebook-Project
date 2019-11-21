@@ -9,6 +9,8 @@ https://gomakethings.com/climbing-up-and-down-the-dom-tree-with-vanilla-javascri
     For Mobile
   */
 
+$(document).ready(function() {
+
   let nav = {
     $collapser: null,
     $allCollapseBtn: null,
@@ -18,7 +20,7 @@ https://gomakethings.com/climbing-up-and-down-the-dom-tree-with-vanilla-javascri
   let dropdown = {
     $container: null,
     $dropdownList: null,
-    $allCollapseBtn: null,
+    $allToggleBtn: null,
     dataTransition: null
   }
 
@@ -215,3 +217,78 @@ https://gomakethings.com/climbing-up-and-down-the-dom-tree-with-vanilla-javascri
     $dropdownBtn.attr('aria-expanded', 'false');
   }
 
+  /*
+  @ Carousel Task:
+  @ $('.carousel') is the container of carousel
+
+  */
+  $('.carousel').on('click scroll', scrollToItem);
+
+  function scrollToItem(event) {
+    
+    const $prevBtn = $(this).find('.prev-btn');
+    const $nextBtn = $(this).find('.next-btn');
+
+    console.log('carousel', $(this));
+
+
+    // = this.querySelector('[role="listbox"]')
+    const carousel = $(this).find('[role="listbox"]')[0];
+    console.log('ala', carousel.offsetWidth);
+    const maxScrollWidth = carousel.scrollWidth;
+    const carouselWidth = carousel.offsetWidth;
+
+    /* - begin:  currentScrollLeft = 0 (always)   */
+    const currentScrollLeft = carousel.scrollLeft;
+    const maxScrollLeft = maxScrollWidth - carouselWidth;
+
+    /* = carousel.querySelector('.browse-item')[0] */
+    const firstScrollItem = $(carousel).children('.carousel-item')[0];
+    const itemWidth = firstScrollItem.offsetWidth;
+    console.log('item', itemWidth);
+
+    const $target = $(event.target);
+    const $button = $target.closest('[data-slide]');
+
+    let nextPosition;
+
+    if ($button.length) {
+      /* = isSameNode() = isEqualNode */
+      if ($button.is($nextBtn)) {
+        nextPosition = Math.min(currentScrollLeft + itemWidth, maxScrollLeft) ;
+
+        smoothScroll(carousel, nextPosition);
+      } else if ($button.is($prevBtn)){
+        nextPosition = Math.max(currentScrollLeft - itemWidth, 0) ;
+
+        smoothScroll(carousel, nextPosition);
+      }
+
+      if (nextPosition == 0) {
+        /*
+        - don't use fadeOut() . b/c jquery.slim don't have AJAX
+        */
+        $prevBtn.addClass('prevent-btn');
+        console.log('prev btn hide');
+      } else if (nextPosition == maxScrollLeft) {
+        $nextBtn.addClass('prevent-btn');
+      } else {
+        /* css('display', 'block'); */
+        $prevBtn.removeClass('prevent-btn');
+        $nextBtn.removeClass('prevent-btn');
+      }
+    }
+  
+  }
+
+  function smoothScroll(node, nextPosition) {
+    return node.scrollTo({
+      left: nextPosition,
+      // behavior: 'smooth'
+    })
+  }
+
+
+
+
+});

@@ -15,421 +15,1828 @@
   
   -->
   <div id="eBookLuvContainer">
-    <div class="nav-container">
-      <!-- bootstrap don't have <header> -->
-      <div class="navbar-menu-mobile">
-        <nav class="navbar navbar-expand-lg bottom-shadow navbar-padding">
-      
-          <div class="left-navbar">
-            <div class="logo-container">
-              <a href="/" class="nav-logo">
-                <img src="images/logo.svg" class="logo" 
-                    width="100" height="24" alt="logo">
-              </a>
-            </div>
-          </div>
+    <header style="height: 64px">
+      <div class="bottom-shadow">
+          <!-- bootstrap don't have <header> -->
+          <div class="navbar-menu-mobile">
+            <nav class="navbar navbar-expand-lg navbar-padding">
           
-          <div class="right-navbar">
-            <ul class="list-right-navbar">
-              <li class="right-nav-item">
-                <div class="search-wrapper" aria-label="search-form-container">
-                  <div class="svg-btn-wrapper">
-                    <!-- toggle search field -->
-                    <span class="toggle-search svg-btn"
-                        data-target="#searchFormMobile" aria-expanded="false">
-                      <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.941 12.0762C14.0232 10.7977 14.6757 9.14401 14.6757 7.33785C14.6757 3.28527 11.3904 0 7.33785 0C3.28527 0 0 3.28527 0 7.33785C0 11.3904 3.28527 14.6757 7.33785 14.6757C9.14401 14.6757 10.7977 14.0232 12.0762 12.941L19.1352 20L20 19.1352L12.941 12.0762ZM7.33785 13.3481C4.01847 13.3481 1.32758 10.6572 1.32758 7.33785C1.32758 4.01847 4.01847 1.32758 7.33785 1.32758C10.6572 1.32758 13.3481 4.01847 13.3481 7.33785C13.3481 10.6572 10.6572 13.3481 7.33785 13.3481Z" fill="black"/>
-                      </svg>                                    
-                    </span>
-                  </div>
-                  
-                  <form id="searchFormMobile" class="e-collapse search-form"> 
-                    <button type="button" class="svg-btn back-btn hide-tablet"
-                        data-target="#searchFormMobile" aria-expanded="false" >
-                      <span class="svg-wrapper">
-                        <svg class="svg-icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9453 0.167969L13.0547 1.83207L3.80282 8.00002L13.0547 14.168L11.9453 15.8321L0.197266 8.00002L11.9453 0.167969Z" fill="black"/>
+              <div class="left-navbar">
+                <div class="logo-container">
+                  <a href="/" class="nav-logo">
+                    <img src="images/logo.svg" class="logo" 
+                        width="100" height="24" alt="logo">
+                  </a>
+                </div>
+              </div>
+              
+              <div class="right-navbar">
+                <ul class="list-right-navbar">
+                  <li class="right-nav-item">
+                    <div class="search-wrapper" aria-label="search-form-container">
+                      <div class="svg-btn-wrapper">
+                        <!-- toggle search field -->
+                        <span class="toggle-search svg-btn"
+                            data-target="#searchFormMobile" aria-expanded="false">
+                          <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.941 12.0762C14.0232 10.7977 14.6757 9.14401 14.6757 7.33785C14.6757 3.28527 11.3904 0 7.33785 0C3.28527 0 0 3.28527 0 7.33785C0 11.3904 3.28527 14.6757 7.33785 14.6757C9.14401 14.6757 10.7977 14.0232 12.0762 12.941L19.1352 20L20 19.1352L12.941 12.0762ZM7.33785 13.3481C4.01847 13.3481 1.32758 10.6572 1.32758 7.33785C1.32758 4.01847 4.01847 1.32758 7.33785 1.32758C10.6572 1.32758 13.3481 4.01847 13.3481 7.33785C13.3481 10.6572 10.6572 13.3481 7.33785 13.3481Z" fill="black"/>
+                          </svg>                                    
+                        </span>
+                      </div>
+                      
+                      <form id="searchFormMobile" class="e-collapse search-form"> 
+                        <button type="button" class="svg-btn back-btn hide-tablet"
+                            data-target="#searchFormMobile" aria-expanded="false" >
+                          <span class="svg-wrapper">
+                            <svg class="svg-icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9453 0.167969L13.0547 1.83207L3.80282 8.00002L13.0547 14.168L11.9453 15.8321L0.197266 8.00002L11.9453 0.167969Z" fill="black"/>
+                            </svg>
+                          </span>
+                        </button>
+        
+                        <input type="search" name="s" placeholder="Search eBookLuv"
+                            autocomplete="off"  id="searchField" class="text-input search-field">
+                    
+                        <button type="submit" class="svg-btn hide-tablet">
+                          <span class="svg-wrapper">
+                            <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.941 12.0762C14.0232 10.7977 14.6757 9.14401 14.6757 7.33785C14.6757 3.28527 11.3904 0 7.33785 0C3.28527 0 0 3.28527 0 7.33785C0 11.3904 3.28527 14.6757 7.33785 14.6757C9.14401 14.6757 10.7977 14.0232 12.0762 12.941L19.1352 20L20 19.1352L12.941 12.0762ZM7.33785 13.3481C4.01847 13.3481 1.32758 10.6572 1.32758 7.33785C1.32758 4.01847 4.01847 1.32758 7.33785 1.32758C10.6572 1.32758 13.3481 4.01847 13.3481 7.33785C13.3481 10.6572 10.6572 13.3481 7.33785 13.3481Z" fill="black"/>
+                            </svg>                   
+                          </span>
+                          </button>
+                      </form>
+                    </div>
+                  </li>
+        
+                  <li class="right-nav-item hide-phone">
+                    <div class="nav-text">
+                      <a href="#" class="h-btn signIn-text">
+                        Sign in
+                      </a>
+                    </div>
+                      
+                  </li>
+        
+                  <li class="right-nav-item hide-desktop">
+                    <button class="toggle-menu svg-btn"
+                      data-toggle="e-collapse" data-target="#navbarListMobile"
+                      aria-controls="navbarNav" aria-expanded="false" 
+                      aria-label="Toggle navigation" data-transition="nav-container-transition">
+                      <span class="menu-icon svg-wrapper">
+                        <svg class="svg-icon" width="24" height="20" viewBox="0 0 24 20" fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M24 3.5H0V0.5H24V3.5Z" fill="black"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M24 11.5H0V8.5H24V11.5Z" fill="black"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M24 19.5H0V16.5H24V19.5Z" fill="black"/>
                         </svg>
                       </span>
                     </button>
     
-                    <input type="search" name="s" placeholder="Search eBookLuv"
-                        autocomplete="off"  id="searchField" class="text-input search-field">
-                
-                    <button type="submit" class="svg-btn hide-tablet">
-                      <span class="svg-wrapper">
-                        <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.941 12.0762C14.0232 10.7977 14.6757 9.14401 14.6757 7.33785C14.6757 3.28527 11.3904 0 7.33785 0C3.28527 0 0 3.28527 0 7.33785C0 11.3904 3.28527 14.6757 7.33785 14.6757C9.14401 14.6757 10.7977 14.0232 12.0762 12.941L19.1352 20L20 19.1352L12.941 12.0762ZM7.33785 13.3481C4.01847 13.3481 1.32758 10.6572 1.32758 7.33785C1.32758 4.01847 4.01847 1.32758 7.33785 1.32758C10.6572 1.32758 13.3481 4.01847 13.3481 7.33785C13.3481 10.6572 10.6572 13.3481 7.33785 13.3481Z" fill="black"/>
-                        </svg>                   
-                      </span>
-                      </button>
-                  </form>
-                </div>
-              </li>
-    
-              <li class="right-nav-item hide-phone">
-                <a href="#" class="signIn-btn signIn-text">
-                  Sign in
-                </a> 
-              </li>
-    
-              <li class="right-nav-item hide-desktop">
-                <button class="toggle-menu svg-btn"
-                  data-toggle="e-collapse" data-target="#navbarListMobile"
-                  aria-controls="navbarNav" aria-expanded="false" 
-                  aria-label="Toggle navigation" data-transition="navbar-container-transition">
-                  <span class="menu-icon svg-wrapper">
-                    <svg class="svg-icon" width="24" height="20" viewBox="0 0 24 20" fill="none">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M24 3.5H0V0.5H24V3.5Z" fill="black"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M24 11.5H0V8.5H24V11.5Z" fill="black"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M24 19.5H0V16.5H24V19.5Z" fill="black"/>
-                    </svg>
-                  </span>
-                </button>
-
-                <div class="e-collapse navbar-collapse navbar-container nav-font" id="navbarListMobile" aria-expanded="false">
-                  <div class="nav-btn-wrapper hide-desktop"> 
-                    <!--  reuse menu btn -->
-                    <button class="toggle-menu svg-btn"
-                        data-toggle="e-collapse" data-target="#navbarListMobile"
-                        aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation" data-transition="navbar-container-transition">
-                        <span class="svg-wrapper">
-                          <svg class="svg-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 5.15781L12.1578 0L14 1.84219L8.84219 7L14 12.1578L12.1578 14L7 8.84219L1.84219 14L0 12.1578L5.15781 7L0 1.84219L1.84219 0L7 5.15781Z" fill="black"/>
-                          </svg>
-                        </span>
-                    </button>
-                  </div>
-          
-                  <ul class="navbar-nav navbar-wrapper">    
-                    <li class="nav-item active">
-                      <a href="https://api.jquery.com/one/#one-events-data-handler" class="nav-link nav-item-wrapper">
-                        Home
-                      </a>
-                    </li>
-          
-                    <li class="nav-item" aria-controls="dropdown-container">
-                      <div class="dropdown-menu-container">
-                        <button class="toggle-dropdown nav-item-wrapper category-item"
-                          type="button" data-target="#dropdownCategoryMobile" 
-                          aria-haspopup="true" aria-expanded="false">
-                          <div>
-                            <span>Categories</span>
+                    <div class="e-collapse navbar-collapse nav-container" id="navbarListMobile" aria-expanded="false">
+                      <div class="nav-btn-wrapper hide-desktop"> 
+                        <!--  reuse menu btn -->
+                        <button class="toggle-menu svg-btn"
+                            data-toggle="e-collapse" data-target="#navbarListMobile"
+                            aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation" data-transition="nav-container-transition">
+                            <span class="svg-wrapper">
+                              <svg class="svg-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 5.15781L12.1578 0L14 1.84219L8.84219 7L14 12.1578L12.1578 14L7 8.84219L1.84219 14L0 12.1578L5.15781 7L0 1.84219L1.84219 0L7 5.15781Z" fill="black"/>
+                              </svg>
+                            </span>
+                        </button>
+                      </div>
+              
+                      <ul class="navbar-nav navbar-wrapper">    
+                        <li class="nav-item active">
+                          <div class="nav-text">
+                            <a href="https://api.jquery.com/one/#one-events-data-handler" class="nav-link nav-item-wrapper">
+                              Home
+                            </a>
                           </div>
                           
-                          <div class="icon-arrow">
-                            <span class="svg-btn hide-desktop">
-                              <svg class="svg-icon" width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.03541 0L-5.8918e-08 1.48731L8.63491 7L-5.8918e-08 12.5127L1.03541 14L12 7L1.03541 0Z" fill="black"/>
-                              </svg>  
-                            </span>
-                          </div>
-                        </button>
-                        
-                        <div class="dropdown-collapse dropdown-container" id="dropdownCategoryMobile" 
-                            aria-expanded="false"  >
-                          <ul class="dropdown-list">
-                            <div class="nav-btn-wrapper hide-desktop">
-                              <button class="toggle-dropdown svg-btn" type="button" 
-                                data-target="#dropdownCategoryMobile" aria-expanded="false">
-                                <span class="svg-wrapper">
-                                  <svg class="svg-icon" width="13" height="16" viewBox="0 0 13 16">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1619 0.167969L12.1973 1.76152L3.56236 7.66797L12.1973 13.5744L11.1619 15.168L0.197266 7.66797L11.1619 0.167969Z" fill="black"/>
-                                  </svg>                          
+                        </li>
+              
+                        <li class="nav-item" aria-controls="dropdown-container">
+                          <div class="dropdown-menu-container">
+                            <button class="toggle-dropdown nav-item-wrapper category-item"
+                              type="button" data-target="#dropdownCategoryMobile" 
+                              aria-haspopup="true">
+                              <div class="nav-text">
+                                <span>Categories</span>
+                              </div>
+                              
+                              <div class="icon-arrow">
+                                <span class="svg-btn hide-desktop">
+                                  <svg class="svg-icon" width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.03541 0L-5.8918e-08 1.48731L8.63491 7L-5.8918e-08 12.5127L1.03541 14L12 7L1.03541 0Z" fill="black"/>
+                                  </svg>  
                                 </span>
-                              </button>
+                              </div>
+                            </button>
+                            
+                            <div class="dropdown-collapse dropdown-container" id="dropdownCategoryMobile" 
+                                aria-expanded="false"  >
+                              <ul class="dropdown-list">
+                                <div class="nav-btn-wrapper hide-desktop">
+                                  <button class="toggle-dropdown svg-btn" type="button" 
+                                    data-target="#dropdownCategoryMobile" aria-haspopup="true">
+                                    <span class="svg-wrapper">
+                                      <svg class="svg-icon" width="13" height="16" viewBox="0 0 13 16">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1619 0.167969L12.1973 1.76152L3.56236 7.66797L12.1973 13.5744L11.1619 15.168L0.197266 7.66797L11.1619 0.167969Z" fill="black"/>
+                                      </svg>                          
+                                    </span>
+                                  </button>
+                                </div>
+            
+                                <li class="dropdown-item">
+                                  <div class="dropdown-item-wrapper nav-text">
+                                    <a href="#">
+                                      Kids
+                                    </a>
+                                  </div>
+                                </li>
+            
+                                <li class="dropdown-item">
+                                  <div class="dropdown-item-wrapper nav-text">
+                                    <a href="#">
+                                      Young Adult
+                                    </a>
+                                  </div>
+                                </li>
+            
+                                <li class="dropdown-item">
+                                  <div class="dropdown-item-wrapper nav-text">
+                                    <a href="#">
+                                      Romance
+                                    </a>
+                                  </div>
+                                </li>
+            
+                                <li class="dropdown-item">
+                                  <div class="dropdown-item-wrapper nav-text">
+                                    <a href="#">
+                                      Travel & Adventure
+                                    </a>
+                                  </div>
+                                </li>
+            
+                                <li class="dropdown-item">
+                                  <div class="dropdown-item-wrapper nav-text">
+                                    <a href="#">
+                                      History
+                                    </a>
+                                  </div>
+                                </li>
+            
+                                <li class="dropdown-item">
+                                  <div class="dropdown-item-wrapper nav-text">
+                                    <a href="#">
+                                      Science
+                                    </a>
+                                  </div>
+                                </li>
+            
+                                <li class="dropdown-item">
+                                  <div class="dropdown-item-wrapper nav-text">
+                                    <a href="#">
+                                      Cooking
+                                    </a>
+                                  </div>
+                                </li>
+                            
+                                <li class="dropdown-item">
+                                  <div class="dropdown-item-wrapper nav-text">
+                                    <a href="#">
+                                      Business
+                                    </a>
+                                  </div>
+                                </li>
+            
+                                <li class="dropdown-item">
+                                  <div class="dropdown-item-wrapper nav-text">
+                                    <a href="#">
+                                      Health & Wellness
+                                    </a>
+                                  </div>
+                                </li>
+                              </ul>
                             </div>
-        
-                            <li class="dropdown-item">
-                              <div class="dropdown-item-wrapper">
-                                <a href="#">
-                                  Kids
-                                </a>
-                              </div>
-                            </li>
-        
-                            <li class="dropdown-item">
-                              <div class="dropdown-item-wrapper">
-                                <a href="#">
-                                  Young Adult
-                                </a>
-                              </div>
-                            </li>
-        
-                            <li class="dropdown-item">
-                              <div class="dropdown-item-wrapper">
-                                <a href="#">
-                                  Romance
-                                </a>
-                              </div>
-                            </li>
-        
-                            <li class="dropdown-item">
-                              <div class="dropdown-item-wrapper">
-                                <a href="#">
-                                  Travel & Adventure
-                                </a>
-                              </div>
-                            </li>
-        
-                            <li class="dropdown-item">
-                              <div class="dropdown-item-wrapper">
-                                <a href="#">
-                                  History
-                                </a>
-                              </div>
-                            </li>
-        
-                            <li class="dropdown-item">
-                              <div class="dropdown-item-wrapper">
-                                <a href="#">
-                                  Science
-                                </a>
-                              </div>
-                            </li>
-        
-                            <li class="dropdown-item">
-                              <div class="dropdown-item-wrapper">
-                                <a href="#">
-                                  Cooking
-                                </a>
-                              </div>
-                            </li>
+            
+                          </div>
+                        </li>
+                      
+                        <li class="nav-item">
+                          <div class="nav-text">
+                            <a href="#" class="nav-link nav-item-wrapper">
+                              Bestseller
+                            </a>
+                          </div>
+                          
+                        </li>
+              
+                        <li class="nav-item">
+                          <div class="nav-text">
+                            <a href="#" class="nav-link nav-item-wrapper">
+                              Community
+                            </a>
+                          </div>
+                        </li>
                         
-                            <li class="dropdown-item">
-                              <div class="dropdown-item-wrapper">
-                                <a href="#">
-                                  Business
-                                </a>
-                              </div>
-                            </li>
-        
-                            <li class="dropdown-item">
-                              <div class="dropdown-item-wrapper">
-                                <a href="#">
-                                  Health & Wellness
-                                </a>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-        
-                      </div>
-                    </li>
-                  
-                    <li class="nav-item">
-                      <a href="#" class="nav-link nav-item-wrapper">
-                        Bestseller
-                      </a>
-                    </li>
-          
-                    <li class="nav-item">
-                      <a href="#" class="nav-link nav-item-wrapper">
-                        Community
-                      </a>
-                    </li>
-                    
-                    <li class="nav-item hide-desktop">
-                      <a href="#" class="nav-link nav-item-wrapper signIn-btn">
-                        Sign in
-                      </a> 
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-
-      <div class="navbar-menu-tablet">
-        <nav class="navbar navbar-expand-lg bottom-shadow navbar-padding">   
-        <div class="left-navbar">
-          <div class="logo-container">
-            <a href="/" class="nav-logo">
-              <img src="images/logo.svg" class="logo" 
-                  width="100" height="24" alt="logo">
-            </a>
-          </div>
-          
-          <div class="navbar-collapse nav-font" id="navbarListDesktop" aria-expanded="false">    
-            <ul class="navbar-nav navbar-wrapper">    
-              <li class="nav-item active">
-                <a href="#" class="nav-link nav-item-wrapper">
-                  Home
-                </a>
-              </li>
-
-              <li class="nav-item dropdown" aria-controls="dropdown-menu">
-                <div class="dropdown-menu-container">
-                  <button class="nav-item-wrapper category-item" data-toggle="dropdown"
-                    type="button" id="categories" aria-haspopup ="true" 
-                    aria-expanded="false" >
-                    <div>
-                      <span>Categories</span>
+                        <li class="nav-item hide-desktop">
+                          <div class="nav-text">
+                            <a href="#" class="nav-link nav-item-wrapper signIn-text h-btn">
+                              Sign in
+                            </a>
+                          </div> 
+                        </li>
+                      </ul>
                     </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+    
+          <div class="navbar-menu-tablet">
+            <div class="navbar-container">
+              <nav class="row navbar navbar-expand-lg navbar-padding">   
+                <div class="left-navbar col-lg-6">
+                  <div class="logo-container">
+                    <a href="/" class="nav-logo">
+                      <img src="images/logo.svg" class="logo" 
+                          width="100" height="24" alt="logo">
+                    </a>
+                  </div>
+                  
+                  <div class="navbar-collapse" id="navbarListDesktop" aria-expanded="false">    
+                    <ul class="navbar-nav navbar-wrapper">    
+                      <li class="nav-item active">
+                        <div class="nav-text">
+                          <a href="#" class="nav-link nav-item-wrapper">
+                            Home
+                          </a>
+                        </div>
+                        
+                      </li>
+        
+                      <li class="nav-item dropdown" aria-controls="dropdown-menu">
+                        <div class="dropdown-menu-container">
+                          <button class="nav-item-wrapper category-item" data-toggle="dropdown"
+                            type="button" id="categories" aria-haspopup ="true" 
+                            aria-expanded="false" >
+                            <div class="nav-text">
+                              <span>Categories</span>
+                            </div>
+                            
+                            <div class="icon-arrow">
+                              <span class="svg-btn icon-open-dropdown">
+                                <svg class="svg-icon" width="12" height="7" viewBox="0 0 12 7" >
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.651807L6 7L-3.72806e-07 0.651807L1.25726 0L6 5.01797L10.7427 0L12 0.651807Z" fill="black"/>
+                                </svg>  
+                              </span>
+                            </div>
+                          </button>
+                          
+                          <div class="dropdown-menu dropdown-container" aria-labelledby="categories">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-item">
+                                <div class="dropdown-item-wrapper nav-text">
+                                  <a href="#">
+                                    Kids
+                                  </a>
+                                </div>
+                              </li>
+          
+                              <li class="dropdown-item">
+                                <div class="dropdown-item-wrapper nav-text">
+                                  <a href="#">
+                                    Young Adult
+                                  </a>
+                                </div>
+                              </li>
+          
+                              <li class="dropdown-item">
+                                <div class="dropdown-item-wrapper nav-text">
+                                  <a href="#">
+                                    Romance
+                                  </a>
+                                </div>
+                              </li>
+          
+                              <li class="dropdown-item">
+                                <div class="dropdown-item-wrapper nav-text">
+                                  <a href="#">
+                                    Travel & Adventure
+                                  </a>
+                                </div>
+                              </li>
+          
+                              <li class="dropdown-item">
+                                <div class="dropdown-item-wrapper nav-text">
+                                  <a href="#">
+                                    History
+                                  </a>
+                                </div>
+                              </li>
+          
+                              <li class="dropdown-item">
+                                <div class="dropdown-item-wrapper nav-text">
+                                  <a href="#">
+                                    Science
+                                  </a>
+                                </div>
+                              </li>
+          
+                              <li class="dropdown-item">
+                                <div class="dropdown-item-wrapper nav-text">
+                                  <a href="#">
+                                    Cooking
+                                  </a>
+                                </div>
+                              </li>
+                          
+                              <li class="dropdown-item">
+                                <div class="dropdown-item-wrapper nav-text">
+                                  <a href="#">
+                                    Business
+                                  </a>
+                                </div>
+                              </li>
+          
+                              <li class="dropdown-item">
+                                <div class="dropdown-item-wrapper nav-text">
+                                  <a href="#">
+                                    Health & Wellness
+                                  </a>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+          
+                        </div>
+                      </li>
                     
-                    <div class="icon-arrow">
-                      <span class="svg-btn icon-open-dropdown">
-                        <svg class="svg-icon" width="12" height="7" viewBox="0 0 12 7" >
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.651807L6 7L-3.72806e-07 0.651807L1.25726 0L6 5.01797L10.7427 0L12 0.651807Z" fill="black"/>
-                        </svg>  
-                      </span>
-                    </div>
-                  </button>
-                  
-                  <div class="dropdown-menu dropdown-container" aria-labelledby="categories">
-                    <ul class="dropdown-list">
-                      <li class="dropdown-item">
-                        <div class="dropdown-item-wrapper">
-                          <a href="#">
-                            Kids
+                      <li class="nav-item">
+                        <div class="nav-text">
+                          <a href="#" class="nav-link nav-item-wrapper">
+                            Bestseller
                           </a>
                         </div>
                       </li>
-  
-                      <li class="dropdown-item">
-                        <div class="dropdown-item-wrapper">
-                          <a href="#">
-                            Young Adult
-                          </a>
-                        </div>
-                      </li>
-  
-                      <li class="dropdown-item">
-                        <div class="dropdown-item-wrapper">
-                          <a href="#">
-                            Romance
-                          </a>
-                        </div>
-                      </li>
-  
-                      <li class="dropdown-item">
-                        <div class="dropdown-item-wrapper">
-                          <a href="#">
-                            Travel & Adventure
-                          </a>
-                        </div>
-                      </li>
-  
-                      <li class="dropdown-item">
-                        <div class="dropdown-item-wrapper">
-                          <a href="#">
-                            History
-                          </a>
-                        </div>
-                      </li>
-  
-                      <li class="dropdown-item">
-                        <div class="dropdown-item-wrapper">
-                          <a href="#">
-                            Science
-                          </a>
-                        </div>
-                      </li>
-  
-                      <li class="dropdown-item">
-                        <div class="dropdown-item-wrapper">
-                          <a href="#">
-                            Cooking
-                          </a>
-                        </div>
-                      </li>
-                  
-                      <li class="dropdown-item">
-                        <div class="dropdown-item-wrapper">
-                          <a href="#">
-                            Business
-                          </a>
-                        </div>
-                      </li>
-  
-                      <li class="dropdown-item">
-                        <div class="dropdown-item-wrapper">
-                          <a href="#">
-                            Health & Wellness
+            
+                      <li class="nav-item">
+                        <div class="nav-text">
+                          <a href="#" class="nav-link nav-item-wrapper">
+                            Community
                           </a>
                         </div>
                       </li>
                     </ul>
                   </div>
-  
                 </div>
-              </li>
-            
-              <li class="nav-item">
-                <a href="#" class="nav-link nav-item-wrapper">
-                  Bestseller
-                </a>
-              </li>
-    
-              <li class="nav-item">
-                <a href="#" class="nav-link nav-item-wrapper">
-                  Community
-                </a>
-              </li>
               
-              <li class="nav-item hide-desktop">
-                <a href="#" class="nav-link nav-item-wrapper signIn-btn">
-                  Sign in
-                </a> 
-              </li>
-            </ul>
+                <div class="right-navbar col-lg-6">
+                  <ul class="list-right-navbar">
+                    <li class="right-nav-item">
+                      <div class="search-wrapper" aria-label="search-form-container">
+                        <div class="svg-btn-wrapper">
+                          <!-- toggle search field -->
+                          <span class="toggle-search svg-btn" data-target="#searchFormTablet">
+                            <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.941 12.0762C14.0232 10.7977 14.6757 9.14401 14.6757 7.33785C14.6757 3.28527 11.3904 0 7.33785 0C3.28527 0 0 3.28527 0 7.33785C0 11.3904 3.28527 14.6757 7.33785 14.6757C9.14401 14.6757 10.7977 14.0232 12.0762 12.941L19.1352 20L20 19.1352L12.941 12.0762ZM7.33785 13.3481C4.01847 13.3481 1.32758 10.6572 1.32758 7.33785C1.32758 4.01847 4.01847 1.32758 7.33785 1.32758C10.6572 1.32758 13.3481 4.01847 13.3481 7.33785C13.3481 10.6572 10.6572 13.3481 7.33785 13.3481Z" fill="black"/>
+                            </svg>                                    
+                          </span>
+                        </div>
+                        
+                        <form id="searchFormTablet" class="e-collapse search-form" aria-expanded="false"> 
+                          <input type="search" name="s" placeholder="Search eBookLuv"
+                              autocomplete="off"  id="searchField" class="text-input search-field">
+                        </form>
+                      </div>
+                    </li>
+          
+                    <li class="right-nav-item hide-phone">
+                      <div class="signIn-font">
+                        <a href="#" class="h-btn signIn-text">
+                          Sign in
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+      </div>
+    </header>
+    
+    <div role="main" id="mainPage">
+      <main>
+        <!-- heading -->
+        <div class="container">
+          <div class="row heading-container">
+            <div class="col-md-6 col-lg-6 col-xl-7 heading-content">
+              <div class="heading-title">
+                <h1 class="heading-text pb-2">Read your favorite books</h1>
+                <h1 class="heading-text">Publish your own books</h1>
+              </div>
+                
+              <div class="sub-title">
+                <span>
+                  Find thousands of books to read online and download free eBooks
+                </span>
+              </div>
+  
+              <div class="get-started-container">
+                <a href="#" class="get-started-btn btn-text h-btn">
+                  Get started
+                </a>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-6 col-xl-5">
+              <div class="heading-image-container img-c-tablet">
+                <div role="img"  class="flying-ebook" aria-label="flying ebook">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div class="right-navbar">
-          <ul class="list-right-navbar">
-            <li class="right-nav-item">
-              <div class="search-wrapper" aria-label="search-form-container">
-                <div class="svg-btn-wrapper">
-                  <!-- toggle search field -->
-                  <span class="toggle-search svg-btn" data-target="#searchFormTablet">
-                    <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.941 12.0762C14.0232 10.7977 14.6757 9.14401 14.6757 7.33785C14.6757 3.28527 11.3904 0 7.33785 0C3.28527 0 0 3.28527 0 7.33785C0 11.3904 3.28527 14.6757 7.33785 14.6757C9.14401 14.6757 10.7977 14.0232 12.0762 12.941L19.1352 20L20 19.1352L12.941 12.0762ZM7.33785 13.3481C4.01847 13.3481 1.32758 10.6572 1.32758 7.33785C1.32758 4.01847 4.01847 1.32758 7.33785 1.32758C10.6572 1.32758 13.3481 4.01847 13.3481 7.33785C13.3481 10.6572 10.6572 13.3481 7.33785 13.3481Z" fill="black"/>
-                    </svg>                                    
-                  </span>
+  
+        <!-- categories -->
+        <div class="categories-section">
+          <div class="container">
+            <div class="carousel-container">
+              <div class="section-container">
+                <div class="section-title">
+                  <h3 class="section-text">Categories</h3>
                 </div>
-                
-                <form id="searchFormTablet" class="e-collapse search-form" aria-expanded="false"> 
-                  <button type="button" class="svg-btn back-btn hide-tablet"
-                      data-target="#searchFormTablet">
-                    <span class>
-                      <svg class="svg-icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9453 0.167969L13.0547 1.83207L3.80282 8.00002L13.0547 14.168L11.9453 15.8321L0.197266 8.00002L11.9453 0.167969Z" fill="black"/>
-                      </svg>
-                    </span>
-                  </button>
-  
-                  <input type="search" name="s" placeholder="Search eBookLuv"
-                      autocomplete="off"  id="searchField" class="text-input search-field">
-              
-                  <button type="submit" class="svg-btn hide-tablet">
-                    <span>
-                      <svg class="svg-icon" width="20" height="20" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.941 12.0762C14.0232 10.7977 14.6757 9.14401 14.6757 7.33785C14.6757 3.28527 11.3904 0 7.33785 0C3.28527 0 0 3.28527 0 7.33785C0 11.3904 3.28527 14.6757 7.33785 14.6757C9.14401 14.6757 10.7977 14.0232 12.0762 12.941L19.1352 20L20 19.1352L12.941 12.0762ZM7.33785 13.3481C4.01847 13.3481 1.32758 10.6572 1.32758 7.33785C1.32758 4.01847 4.01847 1.32758 7.33785 1.32758C10.6572 1.32758 13.3481 4.01847 13.3481 7.33785C13.3481 10.6572 10.6572 13.3481 7.33785 13.3481Z" fill="black"/>
-                      </svg>                   
-                    </span>
-                    </button>
-                </form>
-              </div>
-            </li>
-  
-            <li class="right-nav-item hide-phone">
-              <a href="#" class="signIn-btn signIn-text">
-                Sign in
-              </a> 
-            </li>
-          </ul>
-        </div>
-        </nav>
-      </div>
-      
-    </div>
+                  
+                <div class="carousel slide carousel-mobile-portrait" data-ride="carousel">
+                  <ul class="carousel-inner" role="listbox">
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Kids
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Young Adult
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Romance
+                          </div>  
+                        </a>
+                      </div>
+                    </li>
+                    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Travel & Adventure
+                          </div>
+                        </a>
+                      </a>
+                    </li>
+    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            History
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Science
+                          </div>  
+                        </a>
+                      </a>
+                    </li>
+    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Cooking
+                          </div>  
+                        </a>
+                      </div>
+                    </li>
+    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">  
+                            Business
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+    
+                    <li class="carousel-item last-child">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Health & Welness
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
 
-    <div>
-      <img class="img-background" src="https://images.wallpaperscraft.com/image/laptop_room_on_the_desk_keyboard_mouse_apple_window_interior_73963_1920x1080.jpg" alt="background">
+                <div id="carouselCategories" class="carousel slide carousel-mobile-landscape" data-ride="carousel">
+                  <div class="carousel-btn-container" style="top: 50%; left: -14px;">
+                    <button class="svg-btn carousel-btn prev-btn prevent-btn" href="#carouselCategories" role="button" data-slide="prev">
+                      <span class="svg-wrapper center-position">
+                        <svg class="svg-icon" width="8" height="12" viewBox="0 0 8 12">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.42952 0L8 0.903L1.68862 6L8 11.097L7.42952 12L0 6L7.42952 0Z" fill="black"/>
+                        </svg>                       
+                      </span>
+                    </button>
+                  </div>
+
+                  <ul class="carousel-inner" role="listbox">
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Kids
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Young Adult
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Romance
+                          </div>  
+                        </a>
+                      </div>
+                    </li>
+                    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Travel & Adventure
+                          </div>
+                        </a>
+                      </a>
+                    </li>
+    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            History
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Science
+                          </div>  
+                        </a>
+                      </a>
+                    </li>
+    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Cooking
+                          </div>  
+                        </a>
+                      </div>
+                    </li>
+    
+                    <li class="carousel-item">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">  
+                            Business
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+    
+                    <li class="carousel-item last-child">
+                      <div class="b-container">
+                        <a href="#" class="b-text">
+                          <div class="b-content b-responsive">
+                            Health & Welness
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                  
+                  <div class="carousel-btn-container" style="top: 50%; right: -14px;">
+                    <button class="svg-btn carousel-btn next-btn" href="#carouselCategories" role="button" data-slide="next">
+                      <span class="svg-wrapper center-position">
+                        <svg class="svg-icon" width="8" height="12" viewBox="0 0 8 12">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.570481 0L-1.39723e-08 0.903L6.31138 6L-1.39723e-08 11.097L0.570481 12L8 6L0.570481 0Z" fill="black"/>
+                        </svg>                          
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- top read -->
+        <div id="topReadSection" class="book-section">
+          <div class="container">
+            <div class="carousel-container">
+              <div class="section-container">
+                <div class="section-title section-grid">
+                  <h3 class="section-text text-left">Top Read Books</h3>
+                  
+                  <div class="text-right">
+                    <a href="#">
+                      <span class="section-view">View All</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div id="topReadBooks" class="carousel slide carousel-mobile-portrait">
+                  <ul class="carousel-inner" style="padding: 5px 0" role="listbox">
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/be-prepared.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Be Prepared
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-purchase">Purchase</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/thank-you-amelia-bedelia.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Thank You, Amelia Bedelia
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/half-a-pig.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Half a Pig
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/be-prepared.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Be Prepared
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-purchase">Purchase</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/thank-you-amelia-bedelia.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Thank You, Amelia Bedelia
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/half-a-pig.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Half a Pig
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/be-prepared.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Be Prepared
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-purchase">Purchase</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/thank-you-amelia-bedelia.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Thank You, Amelia Bedelia
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/half-a-pig.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Half a Pig
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="topReadBooks" class="carousel slide carousel-mobile-landscape">
+                  <div class="carousel-btn-container" style="top: 50%; left: -14px;">
+                    <button class="svg-btn carousel-btn prev-btn prevent-btn" href="#carouselCategories" role="button" data-slide="prev">
+                      <span class="svg-wrapper center-position">
+                        <svg class="svg-icon" width="8" height="12" viewBox="0 0 8 12">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M7.42952 0L8 0.903L1.68862 6L8 11.097L7.42952 12L0 6L7.42952 0Z" fill="black"/>
+                        </svg>                       
+                      </span>
+                    </button>
+                  </div>
+                    
+                  <ul class="carousel-inner" style="padding: 5px 0" role="listbox">
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/be-prepared.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Be Prepared
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-purchase">Purchase</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/thank-you-amelia-bedelia.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Thank You, Amelia Bedelia
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/half-a-pig.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Half a Pig
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/be-prepared.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Be Prepared
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-purchase">Purchase</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/thank-you-amelia-bedelia.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Thank You, Amelia Bedelia
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/half-a-pig.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Half a Pig
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/be-prepared.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Be Prepared
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-purchase">Purchase</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/thank-you-amelia-bedelia.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Thank You, Amelia Bedelia
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/half-a-pig.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Half a Pig
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                  
+                  <div class="carousel-btn-container" style="top: 50%; right: -14px;">
+                    <button class="svg-btn carousel-btn next-btn" href="#carouselCategories" role="button" data-slide="next">
+                      <span class="svg-wrapper center-position">
+                        <svg class="svg-icon" width="8" height="12" viewBox="0 0 8 12">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.570481 0L-1.39723e-08 0.903L6.31138 6L-1.39723e-08 11.097L0.570481 12L8 6L0.570481 0Z" fill="black"/>
+                        </svg>                          
+                      </span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- new and trending -->
+        <div id="topReadSection" class="book-section">
+          <div class="container">
+            <div class="carousel-container">
+              <div class="section-container">
+                <div class="section-title section-grid">
+                  <h3 class="section-text text-left">New and Trending</h3>
+                  
+                  <div class="text-right">
+                    <a href="#">
+                      <span class="section-view">View All</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div id="topReadBooks" class="carousel slide carousel-mobile-portrait">
+                  <ul class="carousel-inner" style="padding: 5px 0" role="listbox">
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/be-prepared.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Be Prepared
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-purchase">Purchase</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/thank-you-amelia-bedelia.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Thank You, Amelia Bedelia
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/half-a-pig.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Half a Pig
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/be-prepared.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Be Prepared
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-purchase">Purchase</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/thank-you-amelia-bedelia.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Thank You, Amelia Bedelia
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/half-a-pig.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Half a Pig
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/be-prepared.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Be Prepared
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-purchase">Purchase</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/thank-you-amelia-bedelia.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Thank You, Amelia Bedelia
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="carousel-item">
+                      <div class="book-cover">
+                        <a href="#" class="book-link-cover">
+                          <span class="book-type book-free">Free</span>
+                          
+                          <div class="book-image-cover">
+                            <img src="./images/half-a-pig.png" class="book-image" alt="book image">
+                          </div>
+
+                          <div class="book-name">
+                            Half a Pig
+                          </div>
+
+                          <div class="view-container">
+                            <div class="view-item">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="20" height="12" viewBox="0 0 20 12">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C15.5228 12 20 6 20 6C20 6 15.5228 0 10 0C4.47715 0 0 6 0 6C0 6 4.47715 12 10 12ZM13.3766 5.92857C13.3766 7.94047 11.8939 9.57143 10.0649 9.57143C8.23594 9.57143 6.75325 7.94047 6.75325 5.92857C6.75325 3.91668 8.23594 2.28571 10.0649 2.28571C11.8939 2.28571 13.3766 3.91668 13.3766 5.92857ZM14.026 5.92857C14.026 8.33496 12.2526 10.2857 10.0649 10.2857C7.87731 10.2857 6.1039 8.33496 6.1039 5.92857C6.1039 3.52219 7.87731 1.57143 10.0649 1.57143C12.2526 1.57143 14.026 3.52219 14.026 5.92857Z" fill="black"/>
+                                </svg>        
+                              </span>
+                              <span class="amount-item view-amount">
+                                12899
+                              </span>
+                            </div>
+
+                            <div class="view-item ml-2">
+                              <span class="svg-btn-sm">
+                                <svg class="svg-icon-sm" width="14" height="12" viewBox="0 0 14 12">
+                                  <path d="M1.55556 0C0.696446 0 0 0.672575 0 1.50224V7.91465C0 8.74432 0.696446 9.41689 1.55556 9.41689H2.06467C1.95899 10.3639 1.69917 11.4704 1.29415 11.8674C0.762463 12.3886 4.14383 11.3322 4.71353 9.41689H12.4444C13.3036 9.41689 14 8.74432 14 7.91465V1.50224C14 0.672576 13.3036 0 12.4444 0H1.55556Z" fill="black"/>
+                                </svg>
+                              </span>
+                              <span class="amount-item chat-amount">
+                                120
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   </div>
   
