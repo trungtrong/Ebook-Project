@@ -234,7 +234,8 @@ $(document).ready(function() {
 
     // = this.querySelector('[role="listbox"]')
     const carousel = $(this).find('[role="listbox"]')[0];
-    console.log('ala', carousel.offsetWidth);
+
+    console.log('scrollWidth', carousel.scrollWidth);
     const maxScrollWidth = carousel.scrollWidth;
     const carouselWidth = carousel.offsetWidth;
 
@@ -242,10 +243,11 @@ $(document).ready(function() {
     const currentScrollLeft = carousel.scrollLeft;
     const maxScrollLeft = maxScrollWidth - carouselWidth;
 
+    console.log('maxScrollLeft', maxScrollLeft);
     /* = carousel.querySelector('.browse-item')[0] */
     const firstScrollItem = $(carousel).children('.carousel-item')[0];
     const itemWidth = firstScrollItem.offsetWidth;
-    console.log('item', itemWidth);
+    console.log('itemWidth', itemWidth);
 
     const $target = $(event.target);
     const $button = $target.closest('[data-slide]');
@@ -255,6 +257,9 @@ $(document).ready(function() {
     if ($button.length) {
       /* = isSameNode() = isEqualNode */
       if ($button.is($nextBtn)) {
+        console.log('currentScrollLeft', currentScrollLeft);
+        console.log('total', currentScrollLeft + itemWidth);
+
         nextPosition = Math.min(currentScrollLeft + itemWidth, maxScrollLeft) ;
 
         smoothScroll(carousel, nextPosition);
@@ -263,6 +268,7 @@ $(document).ready(function() {
 
         smoothScroll(carousel, nextPosition);
       }
+      console.log(' nextPosition ', nextPosition )
 
       if (nextPosition == 0) {
         /*
@@ -270,13 +276,19 @@ $(document).ready(function() {
         */
         $prevBtn.addClass('prevent-btn');
         console.log('prev btn hide');
-      } else if (nextPosition == maxScrollLeft) {
-        $nextBtn.addClass('prevent-btn');
-      } else {
+      } else if (nextPosition > 0){
         /* css('display', 'block'); */
         $prevBtn.removeClass('prevent-btn');
-        $nextBtn.removeClass('prevent-btn');
       }
+
+      if (nextPosition === maxScrollLeft) {
+        $nextBtn.addClass('prevent-btn');
+        console.log('lalal');      
+      } else if (nextPosition < maxScrollLeft){
+        $nextBtn.removeClass('prevent-btn');
+        console.log('> <')
+      }
+    
     }
   
   }
@@ -284,7 +296,7 @@ $(document).ready(function() {
   function smoothScroll(node, nextPosition) {
     return node.scrollTo({
       left: nextPosition,
-      // behavior: 'smooth'
+      behavior: 'smooth'
     })
   }
 
