@@ -591,7 +591,7 @@ a.signIn-text {
   display: flex;
   position: relative;
   transform: translateX(0px);
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
 
   /* to hide scrollbar */
@@ -612,10 +612,13 @@ https://stackoverflow.com/questions/3296644/hiding-the-scroll-bar-on-an-html-pag
 @supports (scroll-snap-align: start) {
   /* modern scroll snap points */
   .carousel-inner {
-    scroll-snap-type: x mandatory;
+    /* Error: it makes scrollTo() method works wrong */
+    /* scroll-snap-type: x mandatory; */
   }
   .carousel-item {
     scroll-snap-align: center;
+    /* scroll-snap-align: start !important;
+    scroll-snap-stop: always !important; */
   }
 }
 
@@ -1000,6 +1003,9 @@ a.b-text {
 }
 
 .testimonial-item {
+  margin: 5px;
+  border: none;
+  box-shadow: 0px 1px 5px rgba(0 , 0, 0, .2), 0px -1px 5px rgba(0 , 0, 0, .2);
   width: 16.25rem;
 }
 
