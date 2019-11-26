@@ -403,7 +403,7 @@ svg path {
 
 .search-field {
   border: none;
-  border-bottom: 1px solid #9D9D9D;
+  border-bottom: 1px solid rgba( 0, 0, 0, .4);
   background-color: transparent;
 }
 
@@ -985,6 +985,7 @@ a.b-text {
 .author-info {
   display: grid;
   grid-template-columns: max-content 1fr;
+  align-items: center;
 }
 .author-name {
   font-family: 'Montserrat',sans-serif;
@@ -997,7 +998,7 @@ a.b-text {
 .author-title {
   font-family: 'Montserrat',sans-serif;
   font-size: .9rem;
-  list-style: 1.5;
+  line-height: 1.5;
   font-weight: 500;
   color: #787878;
 }
@@ -1025,6 +1026,186 @@ a.b-text {
 .testimonial-container {
   padding: 2rem 0;
   background-color: #F2F0F0;
+}
+
+/*    pricing     */
+.pricing-container {
+  background-color: #3e66f4;
+}
+
+.pricing-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-inner {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.pricing-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.sub-pricing-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  line-height: 1.3;
+  font-weight: 400;
+  color: #fff;
+}
+
+.pricing-list {
+  margin: 0;
+}
+
+.pricing-item-container {
+  padding: 1.5rem 1rem;
+}
+
+.card-heading {
+  padding: 1rem 0;
+}
+
+.card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #767676;
+  line-height: 1;
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 600;
+  color: #3e66f4;
+}
+
+.card-sub-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1;
+  font-weight: 500;
+  color:  rgba(0, 0, 0, .6);
+}
+
+.list-pricing-content {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: .5rem;
+}
+
+.pricing-icon {
+  padding-right: 1rem;
+}
+
+.pricing-icon svg path {
+  fill: #3e66f4;
+}
+
+.effective-content {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  font-weight: 400;
+  color: #000;
+  line-height: 24px;
+}
+
+.ineffective-content {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, .6);
+  line-height: 24px;
+}
+
+.pricing-button {
+  background-color: #3e66f4;
+  color: #fff;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.pricing-button:hover, .pricing-button:active {
+  color: #fff;
+  background-color: #3457d5;
+  box-shadow: 0px 2px 15px #3e66f4;
+}
+
+.pricing-item:not(:last-child) {
+  padding-bottom: 2rem;
+}
+
+
+/* never miss */
+
+.never-miss-container {
+  padding: 1.75rem 0;
+}
+
+.never-miss-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.email-form-container {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.email-notify {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+}
+
+.never-miss-input {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .4);
+  margin-bottom: 0.75rem;
+  outline: none;
+}
+
+.never-miss-btn {
+  background-color: #3e66f4;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-weight: 500;
+  width: 80%;
+}
+
+.never-miss-btn:hover, .never-miss-btn:active {
+  background-color: #3457d5;
 }
 
 @media (min-width: 576px) {
@@ -1198,6 +1379,72 @@ a.b-text {
     padding-right: 17.5px;
     padding-left: 17.5px;
   }
+
+  .author-avatar {
+    width: 4rem;
+  }
+
+  /* pricing */
+  .pricing-inner {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .card-title {
+    font-size: 2rem;
+  }
+
+  .card-text {
+    font-size: 3rem;
+  }
+
+  .card-sub-title {
+    font-size: 1rem;
+  }
+
+  .pricing-heading {
+    margin-bottom: 2rem;
+  }
+  
+  .pricing-title {
+    font-size: 2.5rem;
+  }
+
+  .sub-pricing-title {
+    font-size: 1.25rem;
+  }
+
+  .effective-content {
+    font-size: 1rem;
+  }
+
+  .ineffective-content {
+    font-size: 1rem;
+  } 
+
+  /* never-miss email */
+  .email-notify {
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .never-miss-input {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+  }
+
+  .never-miss-btn {
+    width: 30%;
+  }
+
+  .never-miss-title {
+    font-size: 2.5rem;
+  }
+
+  .never-miss-container {
+    padding: 3rem 0;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -1375,6 +1622,21 @@ a.b-text {
   .testimonial-title {
     font-size: 2.5rem;
   }
+
+  /* pricing */
+  .pricing-title {
+    font-size: 2.75rem;
+  }
+
+  .sub-pricing-title {
+    font-size: 1.5rem;
+  }
+
+  /* never-miss email */
+  .never-miss-title {
+    font-size: 3.25rem;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -1400,4 +1662,8 @@ a.b-text {
     padding-left: 72.5px;
   }
 
+  /* pricing */
+  .pricing-title {
+    font-size: 3rem;
+  }
 }
