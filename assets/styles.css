@@ -694,7 +694,7 @@ a.b-text {
 
 /* Lesson: active: click => work  ; release => don't work */
 .carousel-btn:active, .carousel-btn:hover {
-  background-color: #3e66f4;
+  box-shadow: 0px 1px 10px #3e66f4, 0px -1px 10px #3e66f4;
 }
 
 .carousel-btn-container {
@@ -1079,8 +1079,8 @@ a.b-text {
   }
 
   #testimonialList .carousel-item {
-    padding-right: 6.5rem;
-    padding-left: 6.5rem;
+    padding-right: 100px;
+    padding-left: 100px;
   }
 
   .testimonial-container {
@@ -1195,8 +1195,8 @@ a.b-text {
 
   /* testimonial */
   #testimonialList .carousel-item {
-    padding-right: 22.5px;
-    padding-left: 22.5px;
+    padding-right: 17.5px;
+    padding-left: 17.5px;
   }
 }
 
@@ -1368,8 +1368,8 @@ a.b-text {
   }
 
   #testimonialList .carousel-item {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 27.5px;
+    padding-left: 27.5px;
   }
 
   .testimonial-title {
@@ -1396,8 +1396,8 @@ a.b-text {
   }
 
   #testimonialList .carousel-item {
-    padding-right: 77px;
-    padding-left: 77px;
+    padding-right: 72.5px;
+    padding-left: 72.5rem;
   }
 
 }

@@ -294,6 +294,7 @@ $(document).ready(function() {
   }
 
   function smoothScroll(node, nextPosition) {
+    console.log('smoothScroll', nextPosition);
     return node.scrollTo({
       left: nextPosition,
       behavior: 'smooth'
