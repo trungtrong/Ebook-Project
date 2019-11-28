@@ -6,7 +6,7 @@ https://api.jquery.com/closest/#closest-selector
 https://gomakethings.com/climbing-up-and-down-the-dom-tree-with-vanilla-javascript/
 */
   /*
-    For Mobile
+    For Mobile first
   */
 
 $(document).ready(function() {
@@ -98,9 +98,7 @@ $(document).ready(function() {
         - dropdown is close
       */
       dropdown = {};
-      console.log('close');
     } else {
-      console.log('open');
       dropdown.$dropdownList = $dropdownList;
       dropdown.dataTransition = dataTransition;
       dropdown.$container = $dropdownList.closest('[aria-controls="dropdown-container"]');
@@ -157,10 +155,7 @@ $(document).ready(function() {
       =>  dropdown is over the nav
       =>  we make dropdown in the order of priority 
     */
-    console.log('dropdown', dropdown);
     if (dropdown.$dropdownList) {
-      console.log('11', $target.closest(dropdown.$container).length);
-      console.log('22', $target.is(dropdown.$container));
       if (!$target.closest(dropdown.$container).length && !$target.is(dropdown.$container)) {
         dropdown.$dropdownList.removeClass(dropdown.dataTransition);
         dropdown = {};
@@ -191,7 +186,7 @@ $(document).ready(function() {
     object.$allCollapseBtn.attr('aria-expanded', 'false');    
   }
 
-    /*
+  /*
   - mouseenter and mouseleave dropdown 
   */
 
@@ -220,22 +215,22 @@ $(document).ready(function() {
   /*
   @ Carousel Task:
   @ $('.carousel') is the container of carousel
+  @ maxScrollLeft =  maxScrollWidth - carouselWidth
+
+  @ When scrollLeft is change. scrollLeft is originally equal item's width of carousel
+  @ $button is either prevBtn or nextBtn
+    one of them ,when  user click on it
 
   */
   $('.carousel').on('click scroll', scrollToItem);
 
   function scrollToItem(event) {
-    
     const $prevBtn = $(this).find('.prev-btn');
     const $nextBtn = $(this).find('.next-btn');
-
-    console.log('carousel', $(this));
-
 
     // = this.querySelector('[role="listbox"]')
     const carousel = $(this).find('[role="listbox"]')[0];
 
-    console.log('scrollWidth', carousel.scrollWidth);
     const maxScrollWidth = carousel.scrollWidth;
     const carouselWidth = carousel.offsetWidth;
 
@@ -243,11 +238,9 @@ $(document).ready(function() {
     const currentScrollLeft = carousel.scrollLeft;
     const maxScrollLeft = maxScrollWidth - carouselWidth;
 
-    console.log('maxScrollLeft', maxScrollLeft);
     /* = carousel.querySelector('.browse-item')[0] */
     const firstScrollItem = $(carousel).children('.carousel-item')[0];
     const itemWidth = firstScrollItem.offsetWidth;
-    console.log('itemWidth', itemWidth);
 
     const $target = $(event.target);
     const $button = $target.closest('[data-slide]');
@@ -257,9 +250,6 @@ $(document).ready(function() {
     if ($button.length) {
       /* = isSameNode() = isEqualNode */
       if ($button.is($nextBtn)) {
-        console.log('currentScrollLeft', currentScrollLeft);
-        console.log('total', currentScrollLeft + itemWidth);
-
         nextPosition = Math.min(currentScrollLeft + itemWidth, maxScrollLeft) ;
 
         smoothScroll(carousel, nextPosition);
@@ -268,40 +258,28 @@ $(document).ready(function() {
 
         smoothScroll(carousel, nextPosition);
       }
-      console.log(' nextPosition ', nextPosition )
 
       if (nextPosition == 0) {
         /*
         - don't use fadeOut() . b/c jquery.slim don't have AJAX
         */
         $prevBtn.addClass('prevent-btn');
-        console.log('prev btn hide');
       } else if (nextPosition > 0){
-        /* css('display', 'block'); */
         $prevBtn.removeClass('prevent-btn');
       }
 
       if (nextPosition === maxScrollLeft) {
         $nextBtn.addClass('prevent-btn');
-        console.log('lalal');      
       } else if (nextPosition < maxScrollLeft){
         $nextBtn.removeClass('prevent-btn');
-        console.log('> <')
       }
-    
     }
-  
   }
 
   function smoothScroll(node, nextPosition) {
-    console.log('smoothScroll', nextPosition);
     return node.scrollTo({
       left: nextPosition,
       behavior: 'smooth'
     })
   }
-
-
-
-
 });
