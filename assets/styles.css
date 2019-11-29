@@ -18,7 +18,7 @@
 
   --secondary-color: #767676;
   --third-color: #DE4456;
-  --nav-color: #0E0A0A;
+  --black-color: #0E0A0A;
   --accent-color: #1D1D1D;
   --light-background-color: #F2F0F0;
   --light-color: #A6A6A6;
@@ -432,11 +432,11 @@ a.signIn-text {
 
 /* icon V and search icon*/
 .icon-open-dropdown > svg > path {
-  fill: var(--nav-color);
+  fill: var(--black-color);
 }
 
 .toggle-search:hover > svg > path {
-  fill: var(--nav-color);
+  fill: var(--black-color);
 }
 
 /* **********  heading     ************** */
@@ -778,7 +778,7 @@ a.b-text {
   line-height: 19px;
   font-weight: 500;
   height: 38px;
-  color: var(--nav-color);
+  color: var(--black-color);
   margin-bottom: 6px;
 }
 
@@ -957,7 +957,7 @@ a.b-text {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-
+  color: var(--black-color);
   margin-bottom: 1rem;
 }
 
@@ -979,7 +979,7 @@ a.b-text {
   font-size: .9rem;
   line-height: 1.5;
   font-weight: 500;
-  color: #787878;
+  color: var(--secondary-color);
 }
 
 .testimonial-item {
@@ -1636,7 +1636,7 @@ li.contact-item {
   }
 
   .nav-text a, .nav-text span {
-    color: var(--nav-color) !important;
+    color: var(--black-color) !important;
   }
 
   .navbar-expand-lg .navbar-nav .nav-item-wrapper {
