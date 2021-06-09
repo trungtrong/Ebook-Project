@@ -1,5 +1,7 @@
 ## EBookLuv Project
 
+* Link: https://trungtrong.github.io/Ebook-Project/
+
 * Custom effect UI/UX
 
 * Using Adobe Illustrator CC Tool to design the illustrators
